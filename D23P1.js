@@ -33,51 +33,41 @@ tb-vc
 td-yn`;
 
 const rows = input.split('\n');
-const connections = [];
-const computerSet = new Set();
+const connections = new Map();
 
-const MatchConnection = (connection, computerA, computerB) => {
-    return connection.includes(computerA) && connection.includes(computerB);
-}
+rows.forEach(row => {
+    const [computerA, computerB] = row.split('-');
+    if (!connections.has(computerA)) connections.set(computerA, new Set());
+    if (!connections.has(computerB)) connections.set(computerB, new Set());
+    connections.get(computerA).add(computerB);
+    connections.get(computerB).add(computerA);
+});
 
-for (let row of rows) {
-    const connection = row.split('-');
-    connections.push(connection);
-    computerSet.add(connection[0]);
-    computerSet.add(connection[1]);
-}
+const matchingParties = [];
 
-const computers = Array.from(computerSet);
-const parties = [];
+const computers = Array.from(connections.keys());
+const computersCount = computers.length;
 
-for (let i = 0; i < computers.length; i++) {
-    for (let j = i + 1; j < computers.length; j++) {
-        for (let k = j + 1; k < computers.length; k++) {
-            const party = [computers[i], computers[j], computers[k]];
-            if (connections.some(con => MatchConnection(con, party[0], party[1])) &&
-                connections.some(con => MatchConnection(con, party[1], party[2])) &&
-                connections.some(con => MatchConnection(con, party[0], party[2]))) {
-                parties.push(party);
+for (let i = 0; i < computersCount; i++) {
+    for (let j = i + 1; j < computersCount; j++) {
+        for (let k = j + 1; k < computersCount; k++) {
+            const computerA = computers[i];
+            const computerB = computers[j];
+            const computerC = computers[k];
+
+            // Check if all three computers are connected
+            if (
+                connections.get(computerA).has(computerB) &&
+                connections.get(computerB).has(computerC) &&
+                connections.get(computerA).has(computerC)
+            ) {
+                matchingParties.push([computerA, computerB, computerC]);
             }
         }
     }
 }
 
-const matchingParties = [];
-for (let party of parties) {
-    let found = false;
-    for (let computer of party) {
-        if (computer[0] === 't') {
-            found = true;
-            break;
-        }
-    }
-    if (found) {
-        matchingParties.push(party);
-    }
-}
+const filteredParties = matchingParties.filter(party => party.some(computer => computer[0] === 't'));
 
 console.log("Computers:", computers);
-//console.log("Single connections:", connections);
-//console.log("LAN parties:", parties);
-console.log("Matching parties (", matchingParties.length, "):" , matchingParties);
+console.log("Matching parties (", filteredParties.length, "):", filteredParties);
