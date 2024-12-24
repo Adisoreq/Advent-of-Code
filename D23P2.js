@@ -91,4 +91,4 @@ const findLargestClique = (connections) => {
 const result = findLargestClique(connections).sort();
 
 console.log("Largest LAN Party:");
-console.log(` - members: ${result.length}\n - password: ${result}`);
+console.log(` - members: ${result.length}\n - password: ${result.join(',')}`);
