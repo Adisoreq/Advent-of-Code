@@ -1,29 +1,29 @@
-## My scripts for [Advent of Code 2024](https://adventofcode.com/2024)
+## My scripts for [Advent of Code](https://adventofcode.com)
 
-| Day | Completion | Written in |
-| --- | ---------- | ---------- |
-| 1   | ⭐⭐      | JavaScript |
-| 2   | ⭐⭐      | JavaScript |
-| 3   | ⭐        | JavaScript |
-| 4   |            |
-| 5   |            |
-| 6   | ⭐        | JavaScript |
-| 7   | ⭐⭐      | JavaScript |
-| 8   |            |
-| 9   |            |
-| 10  |            |
-| 11  | ⭐        | JavaScript |
-| 12  |            |
-| 13  |            |
-| 14  |            |
-| 15  |            |
-| 16  |            |
-| 17  |            |
-| 18  |            |
-| 19  |            |
-| 20  |            |
-| 21  |            |
-| 22  |            |
-| 23  | ⭐⭐      | JavaScript |
-| 24  | ⭐        | JavaScript |
-| 25  |            |
+| Day | ... | 2024 |
+| --- | --- | ---- |
+| 1   |     | ⭐⭐ |
+| 2   |     | ⭐⭐ |
+| 3   |     | ⭐   |
+| 4   |     |     |
+| 5   |     |     |
+| 6   |     | ⭐   |
+| 7   |     | ⭐⭐ |
+| 8   |     | |
+| 9   |     | |
+| 10  |     | |
+| 11  |     | ⭐ |
+| 12  |     | |
+| 13  |     | |
+| 14  |     | |
+| 15  |     | |
+| 16  |     | |
+| 17  |     | |
+| 18  |     | |
+| 19  |     | |
+| 20  |     | |
+| 21  |     | |
+| 22  |     | |
+| 23  |     | ⭐⭐ |
+| 24  |     |⭐   |
+| 25  |     |     |
