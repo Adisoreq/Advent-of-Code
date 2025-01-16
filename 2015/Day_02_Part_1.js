@@ -2,9 +2,11 @@
 const input = `
 2x3x4
 1x1x10
+
 ` 
 
 const areas = []
+let total = 0
 
 const dimensions = input.match(/.+/gm).map(row => row.split('x').map(Number))
 
@@ -16,5 +18,8 @@ for (let d of dimensions) {
 }
 
 for (let i = 0; i < areas.length; ++i) {
+    total += areas[i]
     console.log(`[ ${dimensions[i][0]}, ${dimensions[i][1]}, ${dimensions[i][2]} ] => ${areas[i]}`)
 }
+
+console.log(`Total area: ${total}`)
