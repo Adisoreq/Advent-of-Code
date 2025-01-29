@@ -1,14 +1,22 @@
-const input = `1113122113`;
+let input = '1113122113';
+const steps = 40;
 
-let str = input[0]; // Zaczynamy od pierwszej cyfry
-
-for (let i = 1; i < input.length; i++) {
-    if (input[i] !== input[i - 1]) {
-        str += ','; // Dodajemy przecinek, jeśli cyfra się zmienia
+const transform = (string) => {
+    let str = string[0];
+    for (let i = 1; i < string.length; i++) {
+        if (string[i] !== string[i - 1]) {
+            str += ',';
+        }
+        str += string[i];
     }
-    str += input[i]; // Dodajemy aktualną cyfrę
+    return str.split(',').map(group => `${group.length}${group[0]}`).join('');
 }
 
-const output = str.split(',').map(group => { return `${group.length}${group[0]}` })
+console.log(input)
 
-console.log(output.join(''))
+for (let i = 0; i < steps; i++) {
+    input = transform(input);
+    //console.log(input);
+}
+
+console.log(input.length)
