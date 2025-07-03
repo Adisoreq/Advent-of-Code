@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 1 Part 2
+// By Adisoreq
+
 const input = `()())` // Insert actual input here
 
 var floor = 0;
