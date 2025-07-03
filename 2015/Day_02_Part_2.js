@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 2 Part 2
+// By Adisoreq
+
 const display = 1 // Set to 0 if input is too large to display
 
 // Insert actual input here
