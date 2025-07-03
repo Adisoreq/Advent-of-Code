@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 2 Part 1
+// By Adisoreq
+
 // Insert actual input here
 const input = `
 2x3x4
