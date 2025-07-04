@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 6 Part 1
+// By Adisoreq
+
 class Board {
     #_B = [];
 

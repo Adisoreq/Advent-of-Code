@@ -1,4 +1,9 @@
-// Enter actual input here
+// Advent of Code 2015
+// Day 5 Part 1
+// By Adisoreq
+
+// Input
+
 const input = `
 uxcplgxnkwbdwhrp
 suerykeptdsutidb
@@ -18,6 +23,8 @@ const regex = [
     /^(?!.*(ab|cd|pq|xy)).*$/
 ];
 
+// Code
+
 const str = input.trim().split('\n');
 const ok = [];
 
@@ -29,5 +36,7 @@ for (let line of str) {
         count++;
     }
 }
+
+// Results
 
 console.log(ok, '\n' + count);

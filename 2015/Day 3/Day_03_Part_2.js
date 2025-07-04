@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 3 Part 2
+// By Adisoreq
+
 const input = `^v^v^v^v^v` // Insert actual input here
 
 const Directions = new Map([

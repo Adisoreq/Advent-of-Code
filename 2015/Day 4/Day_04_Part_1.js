@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 4 Part 1
+// By Adisoreq
+
 // Input
 
 const secretKey = 'bgvyzdsv';

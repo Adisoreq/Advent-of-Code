@@ -1,3 +1,7 @@
+// Advent of Code 2015
+// Day 3 Part 1
+// By Adisoreq
+
 const input = `^>v<` // Insert actual input here
 
 const Directions = new Map([
