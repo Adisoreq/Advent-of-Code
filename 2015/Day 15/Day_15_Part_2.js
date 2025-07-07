@@ -189,6 +189,9 @@ for (const combo of allCombinations) {
     }
 }
 
+
+// Results
+
 console.log('Best combination:\n')
 console.log(recipe.toString(), '\n')
 console.log(cookie.toString())
